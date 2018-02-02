@@ -1,20 +1,40 @@
 .Backdrop {
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.8);
-    transition: opacity 0.2s ease-out;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  transition: opacity 0.3s ease-out;
 }
 
 .BackdropOpen {
-  opacity: 1;
-  transform: translateY(0);
+  animation: showBackground 0.2s ease-in;
 }
 
 .BackdropClosed {
-  opacity: 0;
-  transform: translateY(-100%);
+  animation: hideBackground 0.2s ease-in;
+}
+
+@keyframes showBackground {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes hideBackground {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }

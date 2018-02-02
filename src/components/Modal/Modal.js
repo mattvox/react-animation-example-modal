@@ -1,5 +1,5 @@
 import React from 'react';
-import Transition from 'react-transition-group/Transition'
+// import Transition from 'react-transition-group/Transition'
 import CSSTransition from 'react-transition-group/CSSTransition'
 
 import './Modal.css';
@@ -10,9 +10,9 @@ const animationTiming = {
 }
 
 const modal = (props) => {
-  const cssClasses = [
-    'Modal',
-  ]
+  // const cssClasses = [
+  //   'Modal',
+  // ]
 
   return (
     <CSSTransition

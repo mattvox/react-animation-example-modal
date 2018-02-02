@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Transition from 'react-transition-group/Transition'
+// import Transition from 'react-transition-group/Transition'
 
 import "./App.css";
 import Modal from "./components/Modal/Modal";
@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>React Animations</h1>
-        <button
+        {/* <button
           className="Button"
           onClick={() => this.setState(prevState => ({ showBlock: !prevState.showBlock }))}
         >
@@ -53,12 +53,14 @@ class App extends Component {
                 }}
               />
           }
-        </Transition>
+        </Transition> */}
+
         <Modal show={this.state.modalIsOpen} closed={this.closeModal} />
-        {
-          this.state.modalIsOpen && <Backdrop show />
-        }
-        <button className="Button" onClick={this.showModal}>Open Modal</button>
+        {/* {this.state.modalIsOpen && <Backdrop show />} */}
+        <Backdrop show={this.state.modalIsOpen} />
+        <button className="Button" onClick={this.showModal}>
+          Open Modal
+        </button>
         <h3>Animating Lists</h3>
         <List />
       </div>
